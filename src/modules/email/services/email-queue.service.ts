@@ -1,8 +1,8 @@
-import { Employee } from '@modules/employees/entity/employee.entity';
+import { Employee } from '../../employees/entity/employee.entity';
 import { InjectQueue } from '@nestjs/bull';
 import { Injectable } from '@nestjs/common';
 import { Queue } from 'bull';
-import { OpenAiService } from 'openai/services/openai.service';
+import { OpenAiService } from '../../../openai/services/openai.service';
 
 @Injectable()
 export class EmailQueueService {

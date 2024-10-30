@@ -7,12 +7,10 @@ import { OpenAiModule } from 'openai/openai.module';
     imports: [
         BullModule.registerQueue({
             name: 'email',
-            // The processor can be defined in a separate file or inline
-            // If you have a specific processor file, include it in the processors folder.
         }),
-        OpenAiModule, // Import the OpenAiModule here
+        OpenAiModule,
     ],
     providers: [EmailQueueService],
-    exports: [EmailQueueService], // Export EmailQueueService if used in other modules
+    exports: [EmailQueueService],
 })
 export class EmailQueueModule { }

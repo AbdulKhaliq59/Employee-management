@@ -29,7 +29,7 @@ export class AttendanceController {
             'Content-Disposition': `attachment; filename=Attendance_Report_${employee.name}.pdf`,
             'Content-Length': pdfBuffer.length,
         });
-        res.send(pdfBuffer); // Use send for the buffer
+        res.send(pdfBuffer);
     }
 
     @Get(':employeeId/report/excel')
@@ -42,6 +42,6 @@ export class AttendanceController {
             'Content-Disposition': `attachment; filename=Attendance_Report_${employee.name}.xlsx`,
             'Content-Length': excelBuffer.length,
         });
-        res.send(excelBuffer); // Use send for the buffer
+        res.send(excelBuffer);
     }
 }

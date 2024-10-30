@@ -1,4 +1,4 @@
-import { Attendance } from "@modules/attendance/entities/attendance.entity";
+import { Attendance } from "../../attendance/entities/attendance.entity";
 import { Column, Entity, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 
 
