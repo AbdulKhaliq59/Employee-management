@@ -1,0 +1,39 @@
+name: Run Tests on PR
+
+# This workflow runs on any pull request targeting the main branch
+on:
+  pull_request:
+    branches:
+      - main  # Or replace with your default branch name
+
+jobs:
+  test:
+    runs-on: ubuntu-latest  # Use a Linux environment to run the tests
+
+    # Define the steps to run your tests
+    steps:
+      # Step 1: Check out the repository code
+      - name: Checkout code
+        uses: actions/checkout@v3
+
+      # Step 2: Set up Node.js environment
+      - name: Set up Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18' # Replace with your project's Node version
+
+      # Step 3: Install dependencies
+      - name: Install dependencies
+        run: npm install  # If using pnpm, replace with `pnpm install`
+
+      # Step 4: Run tests
+      - name: Run tests
+        run: npm test  # If using Jest or pnpm, replace with `pnpm test`
+
+      # Optional Step 5: Upload test results if needed
+      - name: Upload test results
+        if: failure()  # Only runs if tests fail
+        uses: actions/upload-artifact@v3
+        with:
+          name: test-results
+          path: test-results/  # Replace with your results directory if applicable
