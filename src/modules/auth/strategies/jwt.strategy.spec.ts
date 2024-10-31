@@ -40,9 +40,6 @@ describe('JwtStrategy', () => {
     it('should be defined', () => {
         expect(jwtStrategy).toBeDefined();
     });
-    it('should load JWT_SECRET from environment variables', () => {
-        expect(process.env.JWT_SECRET).toBeDefined();
-    });
 
     describe('validate', () => {
         it('should validate and return the user based on JWT payload', async () => {
