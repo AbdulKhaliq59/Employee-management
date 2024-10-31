@@ -38,8 +38,8 @@ Below are step-by-step instructions for setting up the project in a local enviro
 
 Ensure you have the following dependencies installed:
 
-- [Node.js](https://nodejs.org/) (version X.X or higher)
-- [pnpm](https://pnpm.io/) (version X.X or higher)
+- [Node.js](https://nodejs.org/) (version 20 or higher)
+- [pnpm](https://pnpm.io/) (version 9 or higher)
 - [PostgreSQL](https://www.postgresql.org/) (for database setup)
 
 ### Getting Started
